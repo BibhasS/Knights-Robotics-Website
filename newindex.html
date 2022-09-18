@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<!--
+
+██████╗░██╗██████╗░░██████╗
+██╔══██╗██║██╔══██╗██╔════╝
+██████╦╝██║██████╦╝╚█████╗░
+██╔══██╗██║██╔══██╗░╚═══██╗
+██████╦╝██║██████╦╝██████╔╝
+╚═════╝░╚═╝╚═════╝░╚═════╝░
+-->
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title> FRC 6901 - Knights Robotics </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="newstyle.css">
+</head>
+    <style>
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+section
+{
+    padding: 100px;
+}
+.banner
+{
+    position: relative;
+    min-height: 100vh;
+    background: url(images/banner-svg.svg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+.banner .welcome
+{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.banner h2
+{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.banner h2 span
+{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.banner h3
+{
+    font-size: 1.5em;
+    color: #fff;
+    max-width: 690px;
+    font-weight: 500;
+    margin-top: 50px;
+}
+.logopng
+{
+    max-width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12%;
+}
+.button
+{
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    background: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-size: 1.55em;
+    font-weight: 900;
+    transition: all .6s ease;
+    color: #660066;
+    border: 3px solid white;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.10;
+    background-color: lightsteelblue;
+    outline: none;
+    border-radius: 11px;
+    filter: drop-shadow(0 0 1.05rem black);
+    margin-top: 50px;
+}
+.button:hover
+{
+    background-color: #660066;
+    color: whitesmoke;
+    border-color: black;
+    border-radius: 1em;
+    filter: drop-shadow(0 0 1.25rem #660066);
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.8s;
+}
+.sticky
+{
+    background: #e6e6e6;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.logo
+{
+    color: #fff;
+    font-size: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.about
+{
+    background: #e5e5e5;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.sticky ul li a
+{
+    color: #111;
+}
+.sticky .logo
+{
+    color: #111;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+.logopng
+    {
+        max-width: 0%;
+    }
+.heading
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+.heading h2
+{
+    font-weight: bolder;
+    font-size: 30px;
+}
+.content
+{
+    display: flex;
+    justify-content: space-between;
+}
+.contentP p
+{
+    font-size: 18px;
+}
+.contentP
+{
+    padding-right: 30px;
+}
+.contentP h3
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.imgsp
+{
+    min-width: 50%;
+    margin-left: 30px;
+}
+.aboutfrc
+{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+img
+{
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.our-years
+{
+    background: #111;
+}
+.arrow
+{
+    transform: rotate(320deg);
+}
+.heading.white
+{
+    color: #fff;
+}
+.our-years .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.our-years .content .yearsBox
+{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+.our-years .content .yearsBox img
+{
+    max-width: 80px;
+    filter: invert(1);
+}
+.our-years .content .yearsBox h2
+{
+    font-size: 20px;
+    font-weight: 600;
+}
+.our-years .content .yearsBox:hover
+{
+    background: #660066;
+}
+.outreach
+{
+    background: #f4f4f4;
+}
+.outreach .content
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: space-around;
+    align-items: center;
+}
+    .outreach .content .outreachBox
+{
+    width: 50%;
+    padding: 20px;
+}
+.outreach .content .outreachBox p
+{
+    font-size: 18px;
+    max-width: 590px;
+    display: inline-block;
+}
+.outreach .content .outreachBox h2
+{
+    font-size: 25px;
+    display: inline-block;
+}
+.outreach .content .outreachBox img
+{
+    border: 2px solid #000;
+    transition: 0.25s;
+    width: 55%;
+}
+.sponsors
+{
+    background: #e5e5e5;
+}
+.sponsors .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.sponsors .content .sponsorsBox
+{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: -10px 5px 5px gray;
+}
+
+.sponsors .content .sponsorsBox p
+{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
+}
+.sponsors .content .sponsorsBox li
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 500px;
+}
+.moreinfo
+{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}   
+.moreinfo .beneifits
+{
+    height: 190px;
+}
+.moreinfo .beneifits p
+{
+    max-width: 1000px;
+}
+.moreinfo .beneifits h1
+{
+    height: 50px;
+}
+.moreinfo .returns
+{
+   height: 250px; 
+}
+.moreinfo .returns p
+{
+    max-width: 1200px;
+}
+.moreinfo .returns h1
+{
+    height: 50px;
+}
+.info
+{
+    text-align: center;
+}
+.firstsite .a
+{
+    color: red;
+}
+.firstsite a:link {
+  color: darkred;
+  background-color: transparent;
+  text-decoration: none;
+  transition: 1.5s;
+}
+.firstsite a:visited {
+  color: #660066;
+  transition: 1.5s;
+  background-color: transparent;
+  text-decoration: none;
+}
+.firstsite a:hover {
+  color: blue;
+  transition: 1.5s;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.firstsite a:active {
+  color: white;
+  transition: 1.5s;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.addy
+{
+    max-width: 185px;
+}
+.contact
+{
+    background: #0c010c;
+}
+.formBx
+{
+    min-width: 60%;
+}
+.formBx form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.formBx form h3,
+.contactInfo h3
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.formBx form input,
+.formBx form textarea
+{
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    background: #222;
+    border: none;
+    outline: none;
+    color: #fff;
+    resize: vertical;
+}
+.formBx form textarea
+{
+    min-height: 175px;
+}
+.formBx form input::placeholder,
+.formBx form textarea::placeholder
+{
+    color: #808081;
+}
+.formBx form input[type="submit"]
+{
+    max-width: 100px;
+    background: #610661;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.contactInfo
+{
+    min-width: 40%;
+}
+.contactInfoBx
+{
+    position: relative;
+}
+.contactInfoBx .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contactInfoBx .box .text
+{
+    display: flex;
+    font-size: 15px;
+    color: #fff;
+    flex-flow: column;
+    font-weight: 400;
+    
+}
+.contactInfoBx .box .text h3
+{
+    font-weight: 600;
+    color: #610661;
+}
+.copyright
+{
+    background: #292929;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.copyright p
+{
+    font-size: 20px;
+    color: #E6E9E0;
+    text-align: center;
+}
+.copyrightimg
+{
+    background: #292929;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.copyrightimg img
+{
+    max-width: 13%;
+    height: auto;
+    filter: drop-shadow(0 0 1.35rem #660066);
+}
+.test
+{
+    background: #292929;
+    text-align: center;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+@media(max-width: 1400px)
+{
+    .banner
+    {
+        background: url(images/blackimagepng.png);
+    }
+    .moreinfo .beneifits 
+    {
+        height: 200px;
+    }
+    .moreinfo .returns 
+    {
+        height: 285px;
+    }
+}
+    
+
+@media (max-width: 990px)
+{
+    header,
+    header.sticky
+    {
+        padding: 20px 50px;
+        z-index: 1000;
+        align-items: center;
+    }
+    .menu
+    {
+        position:fixed;
+        top: 75px;
+        right: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #ededed;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,0.2);
+ }
+    .menu.active
+    {
+        right: 0;
+    }
+    header ul li a
+    {
+        color: #111;
+        font-size: 24px;
+        margin: 10px;
+    }   
+    .toggle
+    {
+        transition: 0.75s;
+        width: 40px;
+        height: 40px;
+        background: url(images/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .toggle.active
+    {
+        transition: 0.75s;
+        background: url(images/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+    header.sticky .toggle
+    {
+        filter: invert(1);
+    }
+    section
+    {
+        padding: 100px 50px;
+    }
+    .logo
+    {
+        font-size: 0px;
+    }
+    .banner
+    {
+        padding: 150px 50px 100px;
+    }
+    .banner h2
+    {
+        font-size: 1.5em;
+    }
+    ,banner h3
+    {
+        font-size: 1em;
+    }
+    .button
+    {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .heading h2
+    {
+        font-size: 25px;
+    }
+    .contextBx h3
+    {
+        font-size: 20px;
+    }
+    .content
+    {
+        flex-direction: column;
+    }
+    .imgsp
+    {
+        margin-bottom: 20px;
+    }
+    .our-years .content .yearsBox
+    {
+        margin: 10px;
+    }
+    .outreach .content .outreachBox img 
+    {
+        width: 95%;
+    }
+    .contactInfo
+    {
+        margin: 20px 0;
+    }
+    .contactInfoBx .box p
+    {
+        font-size: 13px;
+        text-align: center;
+    }
+    .contactInfoBx .box h3
+    {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+    }
+    .formBx form h3, .contactInfo h3
+    {
+        text-align: center;
+    }
+    .contactInfoBx .box
+    {
+        position: relative;
+        height: 75px;
+    }
+    .contactInfoBx .box .text
+    {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .formBx form input[type="submit"]
+    {
+        margin-top: 10px;
+        font-size: 17px;
+        align-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .moreinfo .returns 
+    {
+        height: 415px;
+    }
+    .copyrightimg img 
+    {
+        max-width: 25%;
+    }     
+    .logopng
+    {
+        max-width: 100%;
+    }
+}
+@media (max-width: 420px)
+{
+    .logopng
+    {
+        width: 15%;
+    }
+    .img
+    {
+        margin-left: 30px;
+    }
+}
+@media (max-width: 600px)
+{
+    header,
+    header.sticky
+    {
+        padding: 20px 20px;
+    }
+    .banner
+    {
+        padding: 150px 20px 100px;
+    }
+    section
+    {
+        padding: 100px 20px;
+    }
+    .moreinfo .returns 
+    {
+        height: 450px;
+    }
+    .moreinfo .returns p
+    {
+        font-size: 16px;
+    }
+    .moreinfo .beneifits p,li
+    {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 425px)
+{
+    .sponsors .content .sponsorsBox p 
+    {
+        font-size: 27px;
+    }
+    .sponsors .content .sponsorsBox li 
+    {
+        font-size: 18px;
+    }
+}
+@media (max-width: 500px)
+{
+    .moreinfo .returns 
+    {
+        height: 580px;
+    }   
+    .moreinfo .beneifits 
+    {
+        height: 270px;
+    }
+    .outreach .content .outreachBox h2 
+    {
+        font-size: 13px;
+    }
+    .outreach .content .outreachBox p
+    {
+        font-size: 14px;
+    }
+    .outreach .content .outreachBox
+    {
+        padding: 45px 5px; 
+    }
+    .copyright p 
+    {
+        font-size: 15px;
+    }
+}
+@media (max-width: 400px)
+{ 
+    .moreinfo .beneifits 
+    {
+        height: 200px;
+    }
+    .moreinfo .returns 
+    {
+        height: 490px;
+    }   
+    .moreinfo .returns p 
+    {
+        font-size: 14px;
+    }
+    .moreinfo .beneifits p, li 
+    {
+        font-size: 14px;
+    }
+}
+@media (max-width:355px)
+{
+    .moreinfo .beneifits 
+    {
+        height: 250px;
+    }
+    .moreinfo .returns 
+    {
+        height: 595px;
+    }   
+}
+@media (max-width:335px)
+{
+    .moreinfo .beneifits 
+    {
+        height: 265px;
+    }
+    .moreinfo .returns 
+    {
+        height: 670px;
+    } 
+    .moreinfo .beneifits h1
+    {
+        font-size: 20px;
+    }
+    .moreinfo .returns h1
+    {
+        font-size: 17px;
+    }
+    .contactInfoBx .box p 
+    {
+        font-size: 11px;
+    }
+    .contactInfoBx .box .text h3
+    {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1030px)
+{
+    .copyright
+    {
+        padding: 65px;
+    }
+}        
+    </style>
+<body>
+    <header>
+        <a href="#home" class="logo">Knights Robotics<img src="images/Robotics%20Logo.png" class="logopng" loading="lazy"></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#aboutfrc" onclick="toggleMenu();">FRC</a></li>
+            <li><a href="#our-years" onclick="toggleMenu();">Years</a></li>
+            <li><a href="#outreach" onclick="toggleMenu();">Outreach</a></li>
+            <li><a href="#sponsors" onclick="toggleMenu();">Sponsors</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+    </header>
+  <section class="banner" id="home">
+    <div class="welcome">
+      <h2>Welcome to<br> <span>Knights Robotics</span></h2>
+      <h3>We strive to enrich students and nurture their creative thinking, problem-solving, and leadership skills while allowing for a STEM-based competitive robotics opportunity.</h3>
+      <a href="#about" class="button"> About Us </a>
+    </div>
+  </section>
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About Us</h2>
+        </div>
+        <div class="content">
+            <div class="contentP imgsp">
+                <h3></h3>
+                <p>Knights Robotics is a non-profit FIRST Robotics Competition (FRC) that nurtures high school talent through STEM-based learning. We strive to encourage the practical application of STEM in our community through robotics. Students in our organization have opportunities to develop technical skills such as CAD, programming, and machining, in addition to soft skills such as teamwork, critical problem-solving, and leadership through various subteams and community events. Knights Robotics currently consists of students from Independence High School in Frisco, TX. The team was founded in 2018 and has since gone to the FRC World Championship during the Deep Space Season.</p>
+            </div>
+            <div class="imgsp">
+                <img src="images/teampic.jpg" class="img" loading="lazy">
+            </div>
+        </div>
+    </section>
+    <section class="aboutfrc" id="aboutfrc">
+    <div class="heading">
+            <h2>About FRC</h2>
+        </div>
+        <div class="content">
+            <div class="contentP imgsp">
+                <h3>"The World's Leading Youth-Serving Nonprofit Advancing STEM Education"</h3>
+                    <p class="firstsite">
+                Combining the excitement of sport with the rigors of science and technology. We call FIRST Robotics Competition, the ultimate Sport for the Mind. High-school student participants call it “the hardest fun you’ll ever have.” <br> <br> Under strict rules, resources, and limited time, teams of students are challenged to raise funds, design a team “brand,” hone teamwork skills, and build and program industrial-size robots to play a difficult field game against like-minded competitors. It’s as close to real-world engineering as a student can get. Volunteer professional mentors lend their time and talents to guide each team. Each season ends with an exciting FIRST Championship. <br> <br> Along with the excitement of the competition and the intense matches that occur on the game field, every individual who participates in FIRST robotics is bonded together with a common interest in STEM and is a part of the future it holds for society in many walks of life. <br> <br> <b>More information can be found at the website <a href="https://www.firstinspires.org/" target="_blank"><u>FIRST</u></a> website.</b>
+                    </p>
+            </div>
+            <div class="imgsp">
+                <img src="images/frcimage.jpg" class="img" loading="lazy">
+            </div>
+        </div>
+    </section>
+    <section class="our-years" id="our-years">
+        <div class="heading white">
+            <h2>Our Years</h2>
+            <p>
+                Here are some events 6901 has done.
+            </p>
+        </div>
+        <div class="content">
+            <!--<div class="yearsBox">
+                <img src="images/icon1.png">                
+                <h2>2023  </h2>
+                <p>Good luck to us!</p>
+            </div>-->
+            <div class="yearsBox">
+                <img src="images/rapidicon.png">                
+                <h2>2022 RAPID REACT</h2>
+                <p>The 2022 competitive season was astonishing. We competed in two districts: FIT District Fort Worth Event and FIT District Irving Event. At Fort Worth, we were able to Rank 20 and make it to the quarterfinals before leaving. Although we didn’t do our best in the Fort Worth District, things changed at the  Irving District. While ranking 33rd and winning the District Event Finalist awards, we were able to conquer quarterfinals and semifinals and make it to the finals. While playing with and against the top Texas teams, such as Team 118 Robonauts, Team 148 Robowranglers, and Team 3310 Black Hawk Robotics, we were able to leave with plenty of knowledge and end our season.</p>
+            </div>
+            <div class="yearsBox">
+                <img src="images/computericon.png" loading="lazy">                
+                <h2>2021 VIRTUAL CHALLENGE</h2>
+                <p>Due to the coronavirus pandemic still ongoing, FIRST offered three virtual competitions for teams to compete in. Our team competed in both the FIRST Innovation Challenge sponsored by Qualcomm and the FIRST Game Design Challenge. These two challenges were a fun way for the team to bond and grow despite being in a virtual remote setting. We also received the Engineering Design Award for the game design challenge for having a systematic engineering design approach when constructing the game field.</p>
+            </div>
+            <div class="yearsBox">
+                <img src="images/battery.png" loading="lazy">                
+                <h2>2020 INFINITE RECHARGE</h2>
+                <p>Despite the season being cut short due to the coronavirus outbreak, our team strengthened our approach toward collaboration and had the chance to compete at one of the conferences. Although future competitions were canceled, our team took the opportunity to collaborate with other organizations and universities to teach children and college students about the basic introductions to robotics virtually.</p>
+                </div>
+                <div class="yearsBox">
+                <img src="images/deepspaceicon.png" loading="lazy">                
+                <h2>2019 DEEP SPACE</h2>
+                <p>The 2018-2019 competitive season was extraordinary. This year was crucial to our future existence, as we had to make a name for ourselves. We competed at two Districts in FiT (FIRST in Texas): the Plano District and the Dallas District. We placed eighth in the Plano event and won the Innovation in Control Award, which was sponsored by Rockwell Automation. In our Dallas regionals, we placed fifth and won the Quality Award, which was sponsored by Motorola Solutions Foundation. Following our success at these two events, we competed at the District Championships for FiT in Austin, Texas. We made it onto the quarterfinals and qualified for the FIRST Championship at Houston, Texas, which was an incredible accomplishment for us. We competed in the Roebling Division, and after a long seven weeks of competition, our season had come to an end.</p>
+            </div>
+                <div class="yearsBox">
+                <img class="arrow" src="images/arrowicon.png" loading="lazy">                
+                <h2>2018 POWER UP</h2>
+                <p>This was our rookie year competition. We competed at the Dallas regionals and finished 34th out of the 60 teams. This year helped us establish a foundation for our team. Seeing the other robots inspired our team to attempt to work harder in future seasons to take steps towards that level of success.</p>
+            </div>
+        </div>
+        <div class="heading">
+            <br><a href="pictures.html" class="button">View Pictues</a>
+        </div>
+    </section>
+    <section class="outreach" id="outreach">
+        <div class="heading">
+            <h2>Outreach</h2>
+            <p>
+                The 6901 team provides opportunities for students to learn about science, technology, engineering and math (STEM) fields to better understand robotics.
+            </p>
+        </div>
+        <div class="content">
+            <div class="outreachBox">
+                <img src="images/LAMFO%20AND%20UNIVERSITY%20OF%20BRASILLA'S%20SEMANA.jpg" loading="lazy">
+                <h2>LAMFO AND UNIVERSITY OF BRASILLA'S SEMANA</h2>
+                <p>We helped to assist a college in Brazil virtually by creating and sending videos regarding robotic mechanisms and designs through a simulator. Also, we helped to instruct individuals on the fundamental basics of programming for robotics as an introductory-style lesson.</p>
+            </div>
+            <div class="outreachBox">
+                <img src="images/FIRST%20LEGO%20LEAGUE%20CAMP.webp" loading="lazy">
+                <h2>FIRST LEGO LEAGUE CAMP</h2>
+                <p>Hosted a camp for individuals in elementary and middle school to learn how to get a basic understanding of the engineering design process as well as how to enrich their programming skills with block coding. Also gained a basic outlook on how to utilize sensors in robotics.</p>
+            </div>
+            <div class="outreachBox">
+                <img src="images/AOPS%20VIRTUAL%20CAMP.webp" loading="lazy">
+                <h2>AOPS VIRTUAL CAMP</h2>
+                <p>AOPS Virtual Virtual Robotics camp consisted of assisting the younger students with overall robotics programming in a virtual simulator and engaging them in teamwork by completing specific assigned missions. This also helped boost the overall impact our robotics team had on the community, as we catered to assisting and teaching middle school students.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sponsors" id="sponsors">
+        <div class="heading">
+            <h2>Sponsors</h2>
+            <p>
+                By providing our nonprofit team with one or more of the ways mentioned above, your company enriches STEM in the Frisco, Texas community.
+            </p>
+        </div>
+        <div class="content">
+            <div class="sponsorsBox">
+            <p>
+                Emperor/Empress – $10,000 and up
+                <ui>
+                    <li>Your logo (large-sized) on our website, t-shirt, robot, and competition banner</li>
+                    <li>Up-to to twelve team t-shirts (pre-ordered)</li>
+                    <li>Personalized video showing your impact on our team</li>
+                    <li>Video recap/update after every competition</li>
+                    <li>All King/Queen level benefits</li>
+                </ui>    
+            </p>
+            </div>
+            <div class="sponsorsBox">
+            <p>
+                King/Queen – $5,000 to $9,999
+                <ui>
+                    <li>Your logo (medium-sized) on our website, t-shirt, robot, and competition banner</li>
+                    <li>Demonstration of the robot at your organization’s functions (within travel distance)</li>
+                    <li>All Prince/Princess level benefits</li> 
+                </ui>    
+            </p>
+            </div>
+            <div class="sponsorsBox">
+            <p>
+                Prince/Princess – $2,500 to $4,999
+                <ui>
+                    <li>Get your logo (medium-sized) on the t-shirt, website, and competition banner</li>
+                    <li>Four team t-shirts</li>
+                    <li>All Duke/Dutchess level benefits</li> 
+                </ui>    
+            </p>
+            </div>
+            <div class="sponsorsBox">
+            <p>
+                Duke/Duchess – $1,000 to $2,499
+                <ui>
+                    <li>Your logo (medium-sized) on the website, (small) on the t-shirt and competition banner</li>
+                    <li>All Knight level benefits</li>
+                </ui>    
+            </p>
+            </div>
+            <div class="sponsorsBox">
+            <p>
+                Knight – $500 to $999
+                <ui>
+                    <li>Get your logo (small-sized) on the t-shirt, website, and competition banner</li>
+                    <li>A thank-you team picture</li>
+                    <li>Social media post</li>
+                    <li>All Squire level benefits</li>
+                </ui>    
+            </p>
+            </div>
+            <div class="sponsorsBox">
+            <p>
+                Squire – $100 to $499
+                <ui>
+                    <li>Your name on our website</li>
+                    <li>A thank-you team letter</li>
+                </ui>    
+            </p>
+            </div>
+            <div class="moreinfo">
+            <div class="returns">
+                <h1>Social Return on Investment</h1>
+                <p>Providing our team with monetary/in-kind sponsorships allows for a larger team budget, which will enable us to provide better facilities and have a larger member capacity. Doing so will allow Frisco students to more easily explore engineering, accounting, business, and programming pathways through FIRST robotics. This, in turn, promotes STEM learning and encourages students to pursue jobs in a STEM-related field, as they may not have been inclined to do so before. We would also be able to pay for venue rental fees, which would allow us to host FRC tournaments and STEM-based camps. This expands our team’s outreach, and it would bring more attention to the FIRST Robotics Competition itself as well as your company. This allows for FIRST, our team, and STEM to have longevity in the Frisco/Collin County area. As a sponsor, your company would help foster a new generation of innovative workers. By doing so, you’ve ensured a brighter future for these kids and society as a whole.</p>
+            </div>
+                
+                <div class="beneifits">
+                <h1>Benefits of Sponsoring</h1>
+                <p>By providing our nonprofit team with one or more of the ways mentioned above, your company enriches STEM in the Frisco, Texas community. Your company also gains the following assets:</p>
+                    <ui>
+                        <li>Promoting practical applications of STEM in Frisco, TX</li>
+                        <li>Tax-deductible donation for a 501(c)(3) organization</li>
+                        <li>Mentoring opportunities for business</li>
+                        <li>Recruiting interns and employees</li>
+                        <li>Website and webcast visibility</li>
+                    </ui>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Contact Us!</h2>
+            <p>For more information about FRC Team 6901, Knights Robotics, donations, sponsorships, and more, don’t hesitate to fill out the form and/or contact us!</p>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Contact Info</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p class="addy">Independence High School
+                        10555 Independence Pkwy Frisco, TX 75035 USA</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>Phone Number</h3>
+                            <p>(817) 818-6752</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>frc6901@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form 
+                      action="https://formspree.io/f/mlevgzbj"
+                      method="POST">
+                    <h3>Message Us</h3>
+                    <input type="text" name="name" id="full-name" placeholder="Full Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <textarea name="message" maxlength="700" required placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </section>
+        <div class="test"></div>
+    <div class="copyrightimg">
+            <img src="images/Knights%20Robotics%206901%20Logo.png">
+            <img src="images/first%20logo.webp">
+        </div>
+    <div class="copyright">
+        <p>© Copyright 2022. All rights reserved.</p>
+    </div>
+    
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector('header')
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
