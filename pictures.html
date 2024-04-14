@@ -9,8 +9,9 @@
 ╚═════╝░╚═╝╚═════╝░╚═════╝░
 -->
 <html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title> FRC 6901 - Pictures </title>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -20,502 +21,608 @@
     <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="styleimage.css">
 </head>
-    <style>
-*{
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Zen Maru Gothic', sans-serif;
-} 
-section
-{
-    padding: 100px;
-}
-.banner
-{
-    position: relative;
-    min-height: 100vh;
-    background: url(images/banner-svg.svg);
-    background-size: cover;
-    background-position: right;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.banner .welcome
-{
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-.banner h2
-{
-    font-size: 3em;
-    color: #fff;
-    font-weight: 500;
-    line-height: 1.5em;
-}
-.banner h2 span
-{
-    font-size: 1.5em;
-    font-weight: 700;
-}
-.banner h3
-{
-    font-size: 1.5em;
-    color: #fff;
-    max-width: 690px;
-    font-weight: 500;
-    margin-top: 50px;
-}
-.logopng
-{
-    max-width: 20%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 12%;
-}
-.button
-{
-    position: relative;
-    display: inline-block;
-    margin-top: 20px;
-    background: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    font-size: 1.55em;
-    font-weight: 900;
-    transition: all .6s ease;
-    color: #660066;
-    border: 3px solid white;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.10;
-    background-color: lightsteelblue;
-    outline: none;
-    border-radius: 11px;
-    filter: drop-shadow(0 0 1.05rem black);
-    margin-top: 50px;
-}
-.button:hover
-{
-    background-color: #660066;
-    color: whitesmoke;
-    border-color: black;
-    border-radius: 1em;
-    filter: drop-shadow(0 0 1.25rem #660066);
-}
-header
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 100px;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.8s;
-}
-.sticky
-{
-    padding: 20px 100px;
-    box-shadow: 0 5px 50px rgba(179, 179, 179,0.3);
-}
-.logo
-{
-    color: #fff;
-    font-size: 21px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-.about
-{
-    background: #e5e5e5;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-.sticky ul li a
-{
-    color: wheat;
-}
-.sticky .logo
-{
-    color: wheat;
-}
-header ul
-{
-    position: relative;
-    display: flex;
-}
-header ul li
-{
-    position: relative;
-    list-style: none;
-}
-header ul li a
-{
-    position: relative;
-    display: inline-block;
-    margin: 0 15px;
-    color: #fff;
-    text-decoration: none;
-}
-.logopng
-    {
-        max-width: 0%;
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+
+    html {
+        padding-bottom: 50px;
     }
-.heading
-{
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #111;
-}
-.heading h2
-{
-    font-weight: bolder;
-    font-size: 30px;
-}
-.content
-{
-    display: flex;
-    justify-content: space-between;
-}
-.contentP p
-{
-    font-size: 18px;
-}
-.contentP
-{
-    padding-right: 30px;
-}
-.contentP h3
-{
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-img
-{
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
-@media (max-width: 990px)
-{
-    header,
-    header.sticky
-    {
-        padding: 20px 50px;
-        z-index: 1000;
+
+    * {
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Zen Maru Gothic', sans-serif;
+
+    }
+
+    body {
+        background-color: #000;
+        margin-bottom: 450px;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .welcomes {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
         align-items: center;
     }
-    .menu
-    {
-        position:fixed;
-        top: 75px;
-        right: -100%;
-        display: block;
-        padding: 100px 50px;
-        text-align: center;
-        width: 100%;
-        height: 100vh;
-        background: #ededed;
-        transition: 0.5s;
-        z-index: 999;
-        border-top: 1px solid rgba(0,0,0,0.2);
+
+    .welcomes h2 {
+        font-size: 3em;
+        color: #fff;
+        font-weight: 500;
+        line-height: 1.5em;
     }
-    .menu.active
-    {
-        right: 0;
-    }
-    header ul li a
-    {
-        color: #111;
-        font-size: 24px;
-        margin: 10px;
-    }   
-    .toggle
-    {
-        transition: 0.75s;
-        width: 40px;
-        height: 40px;
-        background: url(images/menu.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 30px;
-        cursor: pointer;
-    }
-    .toggle.active
-    {
-        transition: 0.75s;
-        background: url(images/close.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 25px;
-        cursor: pointer;
-    }
-    header.sticky .toggle
-    {
-        filter: invert(1);
-    }
-    section
-    {
-        padding: 100px 50px;
-    }
-    .logo
-    {
-        font-size: 0px;
-    }
-    .banner
-    {
-        padding: 150px 50px 100px;
-    }
-    .banner h2
-    {
+
+    .welcomes h3 {
         font-size: 1.5em;
+        color: #fff;
+        max-width: 690px;
+        font-weight: 500;
+        margin-top: 50px;
     }
-    ,banner h3
-    {
-        font-size: 1em;
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.8s;
     }
-    .button
-    {
-        margin-top: 10px;
-        padding: 10px 20px;
-        font-size: 15px;
+
+    .sticky {
+        background: #000000;
+        padding: 20px 100px;
+        box-shadow: 0 5px 20px rgba(100, 5, 100, 0.6);
     }
-    .heading h2
-    {
-        font-size: 25px;
+
+    .logo {
+        color: #fff;
+        font-size: 21px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 2px;
     }
-    .contextBx h3
-    {
-        font-size: 20px;
-    }
-    .content
-    {
+
+    .about {
+        background: #efefef;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
-    }  
-    .logopng
-    {
-        max-width: 100%;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
     }
-}
-@media (max-width: 420px)
-{
-    .logopng
-    {
-        width: 15%;
-    }
-    .img
-    {
-        margin-left: 30px;
-    }
-}
-@media (max-width: 600px)
-{
-    header,
-    header.sticky
-    {
-        padding: 20px 20px;
-    }
-    .banner
-    {
-        padding: 150px 20px 100px;
-    }
-    section
-    {
-        padding: 100px 20px;
-    }
-}
-div.gallery img {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border: 1px solid #C0C0C0;
-  filter: drop-shadow(0 0 0.6901rem #301934);
-}
-div.desc {
-  padding: 18px;
-  text-align: center;
-}
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-    padding: 40px 20px;
-    background: #222;
-    color: #fff;
-    max-width: 340px;
-    margin: 20px;
-    text-align: center;
-    transition: 0.5s;
-    border: 2px solid #C0C0C0;
-    filter: drop-shadow(0 0 0.6rem #C0C0C0);
-}
-.button
-{
-    position: relative;
-    display: inline-block;
-    margin-top: 20px;
-    background: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    font-size: 1.55em;
-    font-weight: 900;
-    transition: all .6s ease;
-    color: #660066;
-    border: 3px solid white;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.10;
-    background-color: lightsteelblue;
-    outline: none;
-    border-radius: 11px;
-    filter: drop-shadow(0 0 1.05rem black);
-    margin-top: 50px;
-}
-.button:hover
-{
-    background-color: #660066;
-    color: whitesmoke;
-    border-color: black;
-    border-radius: 1em;
-    filter: drop-shadow(0 0 1.25rem #660066);
-}
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
 
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+
+    .sticky .logo {
+        color: #fff;
+    }
+
+    header ul {
+        position: relative;
+        display: flex;
+    }
+
+    header ul li {
+        position: relative;
+        list-style: none;
+    }
+
+    header ul li a {
+        position: relative;
+        display: inline-block;
+        margin: 0 15px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .heading {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #111;
+    }
+
+    .heading h2 {
+        font-weight: bolder;
+        font-size: 30px;
+    }
+
+    .banner {
+        position: relative;
+        min-height: 100vh;
+        background: url(images/banner-svg.svg);
+        background-size: cover;
+        background-position: right;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+    }
+
+    .banner .welcome {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner h2 {
+        font-size: 3em;
+        color: #fff;
+        font-weight: 500;
+        line-height: 1.5em;
+    }
+
+    .banner h2 span {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    .banner h3 {
+        font-size: 1.5em;
+        color: #fff;
+        max-width: 690px;
+        font-weight: 500;
+        margin-top: 50px;
+    }
+
+    .button {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+        background: white;
+        padding: 15px 35px;
+        text-decoration: none;
+        font-size: 1.55em;
+        font-weight: 900;
+        transition: all .6s ease;
+        color: #660066;
+        border: 3px solid white;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.10;
+        background-color: lightsteelblue;
+        outline: none;
+        border-radius: 11px;
+        filter: drop-shadow(0 0 1.05rem black);
+        margin-top: 50px;
+    }
+
+    .button:hover {
+        background-color: #660066;
+        color: whitesmoke;
+        border-color: black;
+        border-radius: 1em;
+        filter: drop-shadow(0 0 1.25rem #660066);
+    }
+
+    /* .centerImage {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 600px; 
+  overflow: auto;
 }
-*{
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Zen Maru Gothic', sans-serif;
-    background: #222;
-}
-.content
-{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 100px;
-}
+    */
+
+
+    .centerImage {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 100px;
+    }
+
+    @media (max-width: 767px) {
+        .centerImage {
+            top: 30%;
+            height: 110px;
+        }
+    }
+
+
+
+
+    section {
+        padding: 100px;
+    }
+
+    img {
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+    }
+
+    @media (max-width: 990px) {
+
+        header,
+        header.sticky {
+            padding: 20px 50px;
+            z-index: 1000;
+            align-items: center;
+        }
+
+        .menu {
+            position: fixed;
+            top: 75px;
+            right: -100%;
+            display: block;
+            padding: 100px 50px;
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            background: #ededed;
+            transition: 0.5s;
+            z-index: 999;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .menu.active {
+            right: 0;
+        }
+
+        header ul li a {
+            color: #111;
+            font-size: 24px;
+            margin: 10px;
+        }
+
+        .toggle {
+            transition: 0.75s;
+            width: 40px;
+            height: 40px;
+            background: url(images/menu.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 30px;
+            cursor: pointer;
+        }
+
+        .toggle.active {
+            transition: 0.75s;
+            background: url(images/close.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 25px;
+            cursor: pointer;
+        }
+
+        header.sticky .toggle {
+            filter: invert(1);
+        }
+
+        section {
+            padding: 100px 50px;
+        }
+
+        .logo {
+            font-size: 0px;
+        }
+
+        .banner {
+            padding: 150px 50px 100px;
+        }
+
+        .banner h2 {
+            font-size: 1.5em;
+        }
+
+        .banner h3 {
+            font-size: 1em;
+        }
+
+        .button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 15px;
+        }
+
+        @media (max-width: 600px) {
+
+            header,
+            header.sticky {
+                padding: 20px 20px;
+            }
+
+            .banner {
+                padding: 150px 20px 100px;
+            }
+
+            section {
+                padding: 100px 20px;
+            }
+        }
+
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+
 </style>
-    <body>
-        <header>
-        <a href="#home" class="logo">Knights Robotics<img src="images/Robotics%20Logo.png" class="logopng" loading="lazy"></a>
+
+
+<body>
+    <header>
+        <a href="#home" class="logo">Knights Robotics</a>
         <div class="toggle" onclick="toggleMenu();"></div>
         <ul class="menu">
-            <li><a href="https://www.bibhas.xyz/6901#home" onclick="toggleMenu();">Home</a></li>
-            <li><a href="https://www.bibhas.xyz/6901#about" onclick="toggleMenu();">About</a></li>
-            <li><a href="https://www.bibhas.xyz/6901#aboutfrc" onclick="toggleMenu();">FRC</a></li>
-            <li><a href="https://www.bibhas.xyz/6901#our-years" onclick="toggleMenu();">Years</a></li>
-            <li><a href="https://www.bibhas.xyz/6901#outreach" onclick="toggleMenu();">Outreach</a></li>
-            <li><a href="https://www.bibhas.xyz/6901#sponsors" onclick="toggleMenu();">Sponsors</a></li>
-            <li><a href="https://www.bibhas.xyz/6901#contact" onclick="toggleMenu();">Contact</a></li>
+            <li><a href="https://www.frc6901.org/6901#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="https://www.frc6901.org/6901#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="https://www.frc6901.org/6901#about-frc" onclick="toggleMenu();">FRC</a></li>
+            <li><a href="https://www.frc6901.org/6901#our-years" onclick="toggleMenu();">Years</a></li>
+            <li><a href="https://www.frc6901.org/6901#outreach" onclick="toggleMenu();">Outreach</a></li>
+            <li><a href="https://www.frc6901.org/6901#sponsors" onclick="toggleMenu();">Sponsors</a></li>
+            <li><a href="https://www.frc6901.org/6901#contact" onclick="toggleMenu();">Contact</a></li>
         </ul>
     </header>
-    <section id="home">
+    <section>
         <div class="welcomes">
-        <br><br><h2>Knights Robotics<br> <span></span></h2>
-        <h3>Check out some of our achievements and memories together!</h3>
-        <a href="https://www.bibhas.xyz/6901" class="button">Go Back</a>
-    </div>
-  </section>
-<div class="content">
-<div class="responsive">
-  <div class="gallery">
-    <a> 
-        <img src="images/end%20screen.webp" alt="End Screen">
-        <img src="images/layout.webp" alt="Layour">
-        <img src="images/Rainforest%20Rescue.webp" alt="Rainforest Game">
-        <img src="images/2021%20VIRTUAL%20CHALLENGE.webp" alt="2021 Virtual Challenge">
-    </a>
-      <div class="desc">2021 VIRTUAL CHALLENGE</div>
-    <div class="desc">This 2021 virtual event consisted of part of our robotics team working on creating a game field based on certain requirement s for robots to possibly play in during future years within FIRST. Our team received the engineering design award for this event and created a presentation as well. Most importantly, the team gained numerous important skills such as communication and CAD designing skills by effectively cerating a field setup based on the intial planning. After doing so, our team also created an animation and recorded a game introduction video to show to the judges.</div> <br> <br> <div class="desc">The product is a mixed reality (AR and VR) headset with controllers. The headset will contain the user’s smartphone. The headset adds gameplay features into the physical world seen by the user. A heart rate sensor and calorie tracker allow the user to track the intensity of their workout sessions. The controllers will also provide haptic feedback to create a realistic touch experience. Additionally, the sensor and tracker send details to a smartphone application. The app calculates and displays exercise details and statistics, and the application will include multiplayer leaderboards, exercise streaks, and AI recommendations. The software for the headset will exist within the smartphone app.</div>
-      <img src="images/Cyberfit.webp" alt="Cyberfit">
-      <br><a href="https://www.bibhas.xyz/6901#our-years" class="button">View More</a>
-  </div>
-</div>
-    <div class="responsive">
-  <div class="gallery">
-    <a>
-      <img src="images/2020%20INFINITE%20RECHARGE.webp" alt="2020 Infinite Recharge">
-        <img src="images/2020PitCrew.jpg" alt="2020 Pit Crew">
-    </a>
-    <div class="desc">2020 INFINITE RECHARGE</div>
-      <br><a href="https://www.bibhas.xyz/6901#our-years" class="button">View More</a>
-  </div>
-</div>
-    <div class="responsive">
-  <div class="gallery">
-    <a>
-      <img src="images/2019%20DEEP%20SPACE.webp" alt="2019 Deep Space">
-    </a>
-    <div class="desc">2019 DEEP SPACE</div>
-      <br><a href="https://www.bibhas.xyz/6901#our-years" class="button">View More</a>
-  </div>
-</div>
-<div class="responsive">
-  <div class="gallery">
-    <a>
-      <img src="images/2018%20POWER%20UP.webp" alt="2018 Power Up">
-    </a>
-    <div class="desc">2018 POWER UP</div>
-      <br><a href="https://www.bibhas.xyz/6901#our-years" class="button">View More</a>
-  </div>
-</div>
-</div>
-<div class="clearfix"></div>
-        
-        <script type="text/javascript">
-        window.addEventListener('scroll', function(){
+            <br><br>
+            <h2>Knights Robotics<br> <span></span></h2>
+            <h3>Check out some of our achievements and memories together!</h3>
+            <a href="https://frc6901.org/6901" class="button">Go Back</a>
+        </div>
+    </section>
+    <section class="centerImage">
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/2018%20POWER%20UP.avif">
+                    <img class="gallery-image" src="images/2018%20POWER%20UP.avif" alt="2018 Power Up Robot">
+                </a>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/2021%20VIRTUAL%20CHALLENGE.webp">
+                    <img class="gallery-image" src="images/2021%20VIRTUAL%20CHALLENGE.webp" alt="Virtual Challenge Rainforest">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/2019%20DEEP%20SPACE.avif">
+                    <img class="gallery-image" src="images/2019%20DEEP%20SPACE.avif" alt="2019 Team Picture">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/2020%20INFINITE%20RECHARGE.webp">
+                    <img class="gallery-image" src="images/2020%20INFINITE%20RECHARGE.webp" alt="2020 Feild">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/IMG_3660.avif">
+                    <img class="gallery-image" src="images/IMG_3660.avif" alt="2023 leads getting ready to play">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/IMG_3653.avif">
+                    <img class="gallery-image" src="images/IMG_3653.avif" alt="2023 Robot in pit">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/IMG_3664.avif">
+                    <img class="gallery-image" src="images/IMG_3664.avif" alt="2023 Pit Crew working hard 1">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/IMG_3665.avif">
+                    <img class="gallery-image" src="images/IMG_3665.avif" alt="2023 Pit Crew working hard 2">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/IMG_3670.avif">
+                    <img class="gallery-image" src="images/IMG_3670.avif" alt="2023 high school seniors are getting ready to play">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/IMG_3681.avif">
+                    <img class="gallery-image" src="images/IMG_3681.avif" alt="2023 inside of pit crew .5 angle">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/IMG_3685.avif">
+                    <img class="gallery-image" src="images/IMG_3685.avif" alt="2023 inside of pit crew top view">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/senoirs2023.webp">
+                    <img class="gallery-image" src="images/senoirs2023.webp" alt="2023 senoir picture holding awards">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/IMG_4566.avif">
+                    <img class="gallery-image" src="images/IMG_4566.avif" alt="2023 scouts are talking to other scouts for plan 1">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="images/IMG_4571.avif">
+                    <img class="gallery-image" src="images/IMG_4571.avif" alt="2023 scouts are talking to other scouts for plan 2">
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <section class="endBanner">
+        <div class="test"></div>
+        <div class="copyrightimg">
+        </div>
+        <div class="copyright">
+            <p>
+                <!--© Copyright 2022. All rights reserved.-->
+            </p>
+        </div>
+    </section>
+
+    <style>
+        .endBanner {
+            background-color: #000;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            align-items: center;
+        }
+
+        .test {
+            background: #000;
+            text-align: center;
+            padding: 35px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .copyrightimg {
+            background: #000;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .copyright {
+            background: #000;
+            text-align: center;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .copyright {
+            padding: 7px;
+        }
+
+    </style>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function() {
             var header = document.querySelector('header')
             header.classList.toggle('sticky', window.scrollY > 0);
         });
-        
-        function toggleMenu(){
+
+        function toggleMenu() {
             var menuToggle = document.querySelector('.toggle');
             var menu = document.querySelector('.menu');
             menuToggle.classList.toggle('active');
             menu.classList.toggle('active');
         }
+
     </script>
-    </body>
+</body>
+
 </html>
