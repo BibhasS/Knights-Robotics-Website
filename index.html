@@ -1,9 +1,20 @@
 <!DOCTYPE html>
+<!--
+
+██████╗░██╗██████╗░░██████╗
+██╔══██╗██║██╔══██╗██╔════╝
+██████╦╝██║██████╦╝╚█████╗░
+██╔══██╗██║██╔══██╗░╚═══██╗
+██████╦╝██║██████╦╝██████╔╝
+╚═════╝░╚═╝╚═════╝░╚═════╝░
+
+-->
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title> 404 Error - Knights Robotics </title>
+    <title> FRC 6901 - Knights Robotics </title>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -11,128 +22,391 @@
     <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Team 6901 strives to enrich students and nurture their creative thinking, problem-solving, and leadership skills while allowing for a STEM-based competitive robotics opportunity." />
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
 
-*{
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Zen Maru Gothic', sans-serif;
-}
-html,body
-{
+    * {
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Zen Maru Gothic', sans-serif;
+    }
+
+    html,
+    body {
         /*background-image: linear-gradient(to left, #660066,#6a006a,#560056,#440044,#3c003c,#2a002a,#3c003c,#440044,#560056,#6a006a,#660066); 
         background-image: linear-gradient(to left, #eef6ff, #ffffff, #eef6ff, #ffffff, #ffffff, #eef6ff, #ffffff, #eef6ff);
     */
-    background-color: #000000;
-}
-.logo
-{
-    /*display: flex;
+        background-color: #000000;
+    }
+
+    .logo {
+        /*display: flex;
     justify-content: center;
     position: relative;
     top: -590px;
     margin: 0 auto;
     max-width: 960px;*/
-    max-width: 193.5px;
-    margin: 0 auto;
-    height: 200px;
-    position: relative; 
-    top: -600px;
-    filter: drop-shadow(0 0 2rem #660066);
-} 
-.logoimage
-{
-    width: 100%;
-    padding-top: 64.5%;
-    background: url(images/Knights%20Robotics%206901%20Logo.png) no-repeat center;
-    background-size: contain;
-}
-.intro
-{
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -70px;
-    width: 90%;
-}
-.intro h3
-{
-    font-size: 5em;
-    color: #ffffff;
-    font-weight: 600;
-}
-.intro p
-{
-    font-size: 2em;
-    color: #ffffff;
-    font-weight: bolder;
-}
-.intro a
-{
-    position: relative;
-    display: inline-block;
-    margin-top: 20px;
-    background: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    font-size: 1.55em;
-    font-weight: 900;
-    transition: all .6s ease;
-    color: #660066;
-    border: 3px solid white;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.10;
-    background-color: lightsteelblue;
-    outline: none;
-    border-radius: 11px;
-    filter: drop-shadow(0 0 1.05rem black);
-    margin-top: 80px;
-}
-.intro a:hover
-{
-    background-color: #660066;
-    color: whitesmoke;
-    border-color: black;
-    border-radius: 1em;
-    filter: drop-shadow(0 0 1.25rem #660066);
-}
-.mainlogo
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    filter: drop-shadow(0 0 1.6901rem #660066);
-}
-.content {
-    text-align: center;
-    max-width: 870px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    width: 90%;
-}
+        max-width: 193.5px;
+        margin: 0 auto;
+        height: 200px;
+        position: relative;
+        top: -600px;
+        filter: drop-shadow(0 0 2rem #660066);
+    }
+
+    .logoimage {
+        width: 100%;
+        padding-top: 64.5%;
+        background: url(images/Knights%20Robotics%206901%20Logo.png) no-repeat center;
+        background-size: contain;
+    }
+
+    .intro {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -70px;
+        width: 90%;
+    }
+
+    .intro h3 {
+        font-size: 5em;
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    .intro p {
+        font-size: 1.8em;
+        color: #ffffff;
+        font-weight: bolder;
+    }
+
+    .intro a {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+        background: white;
+        padding: 15px 35px;
+        text-decoration: none;
+        font-size: 1.55em;
+        font-weight: 900;
+        transition: all .6s ease;
+        color: #660066;
+        border: 3px solid white;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.10;
+        background-color: lightsteelblue;
+        outline: none;
+        border-radius: 11px;
+        filter: drop-shadow(0 0 1.05rem black);
+        margin-top: 80px;
+    }
+
+    .intro a:hover {
+        background-color: #660066;
+        color: whitesmoke;
+        border-color: black;
+        border-radius: 1em;
+        filter: drop-shadow(0 0 1.25rem #660066);
+    }
+
+    .mainlogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+        filter: drop-shadow(0 0 1.6901rem #660066);
+    }
+
+    .content {
+        text-align: center;
+        max-width: 870px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    .copyright {
+        background: black;
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .copyright p {
+        font-size: 18px;
+        color: #E6E9E0;
+        text-align: center;
+    }
+
+    .copyrightimg {
+        background: black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .copyrightimg img {
+        max-width: 8.15%;
+        height: auto;
+        filter: drop-shadow(0 0 0.45rem #C0C0C0);
+        margin: auto;
+        margin-left: auto;
+    }
+
+    .test {
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    @media (max-width: 1100px) {
+        .copyrightimg img {
+            max-width: 13%;
+        }
+    }
+
+    @media (max-width: 990px) {
+        .copyrightimg img {
+            max-width: 20%;
+        }
+
+        .copyrightimg {
+            margin-top: 100px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .copyrightimg img {
+            max-width: 28%;
+        }
+
+        .copyrightimg {
+            margin-top: 140px;
+        }
+    }
+
+    @media (max-width: 1030px) {
+        .copyright {
+            padding: 65px;
+        }
+
+        .intro h3 {
+            font-size: 4.25em;
+        }
+
+        .intro p {
+            font-size: 1.5em;
+        }
+    }
+
+    @media (max-width: 465px) {
+        .copyright p {
+            font-size: 12px;
+        }
+    }
+
+
+
+    .socialmedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5px;
+    }
+
+    .wrapper {
+        height: 0px;
+    }
+
+    .wrapper .button {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        float: left;
+        margin: 0 10px;
+        overflow: hidden;
+        background: lightgray;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0px 10px 10px;
+        transition: all 0.3s ease-out;
+    }
+
+    .wrapper .button:hover {
+        width: 180px;
+    }
+
+    .wrapper .button .icon {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        border-radius: 55px;
+        box-sizing: border-box;
+        line-height: 60px;
+        transition: all 0.9s cubic-bezier(0.75, 0.55, 0.01, 0.85);
+    }
+
+    .wrapper .button:nth-child(2):hover .icon {
+        background: #0072b1;
+    }
+
+    .wrapper .button:nth-child(1):hover .icon {
+        background: #E1306C;
+    }
+
+    .wrapper .button:nth-child(3):hover .icon {
+        background: #FF0000;
+    }
+
+    .wrapper .button .icon i {
+        font-size: 25px;
+        line-height: 60px;
+        transition: all 0.6s ease-out;
+    }
+
+    .wrapper .button:hover .icon i {
+        color: #fff;
+    }
+
+    .wrapper .button span {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-left: 10px;
+        transition: all 0.6s ease-out;
+    }
+
+    .wrapper .button:nth-child(1) span {
+        color: #0072b1;
+    }
+
+    .wrapper .button:nth-child(2) span {
+        color: #e95950;
+    }
+
+    .wrapper .button:nth-child(3) span {
+        color: #E1306C;
+    }
+
+    .instagramlink:link,
+    .youtubelink:link,
+    .linkedinlinkha:link {
+        text-decoration: none;
+    }
+
+    .instagramlink:hover,
+    .youtubelink:hover,
+    .linkedinlinkha:hover {
+        text-decoration: none;
+        background: linear-gradient(45deg, #660066, #5c005c, #c700c7, #5c005c, #660066);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+
+    .instagramlink:visited,
+    .youtubelink:visited,
+    .linkedinlinkha:visited {
+        background-color: #f44336;
+        color: black;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .instagramlink:active,
+    .youtubelink:active,
+    .linkedinlinkha:active {
+        text-decoration: none;
+        background: linear-gradient(to left, #660066, #6a006a, #560056, #440044, #3c003c, red, #3c003c, #440044, #560056, #6a006a, #660066);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+
 </style>
-    <body>
-        <main class="mainlogo">
-            <img src="images/Knights%20Robotics%206901%20Logo.png">
-            </main>
-        <div class="content">
-            <div class="intro">
-                <h3>Knights Robotics</h3>
+
+<body>
+    <main class="mainlogo">
+        <img src="images/Knights%20Robotics%206901%20Logo.png">
+    </main>
+    <div class="content">
+        <div class="intro">
+            <h3>Knights Robotics</h3>
             <p>
                 Team 6901 strives to enrich students and nurture their creative thinking, problem-solving, and leadership skills while allowing for a STEM-based competitive robotics opportunity.
             </p>
-            <a href="https://www.bibhas.xyz/6901">Learn More</a>
-            </div>
+            <a href="https://frc6901.org/6901">Learn More</a>
         </div>
-    </body>
+    </div>
+    <div class="test"></div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- pics for sm icon - 
+                https://codepen.io/mr-zouraiz123/pen/gORBRdX-->
+    <div class=socialmedia>
+        <div class="wrapper">
+            <!--
+         <div class="button">
+            <div class="icon">
+               <i class="fab fa-linkedin"></i>
+            </div>
+            <span>
+                <a class="linkedinlinkha" href="https://www.linkedin.com/in/knights-robotics-060a921b3/" target="_blank">Linkedin</a>
+             </span>
+         </div>
+-->
+            <div class="button">
+                <div class="icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <span>
+                    <a class="instagramlink" href="https://www.instagram.com/frc6901/?" target="_blank">Instagram</a>
+                </span>
+            </div>
+            <!--
+         <div class="button">
+            <div class="icon">
+               <i class="fab fa-youtube"></i>
+            </div>
+            <span>
+                <a class="youtubelink" href="https://www.youtube.com/channel/UC5mVdI3NlL8Nqdavmx-4JNQ?sub_confirmation=1" target="_blank">YouTube</a>
+             </span>
+         </div>
+-->
+        </div>
+    </div>
+    <section class="copyrightimg">
+        <img src="images/Robotics%20Logo.png">
+        <img src="images/first%20logo.webp">
+    </section>
+    <div class="copyright">
+        <p>
+            <!--© Copyright 2022. All rights reserved.-->
+        </p>
+    </div>
+</body>
+
 </html>
