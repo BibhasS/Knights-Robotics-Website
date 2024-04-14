@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title> 404 Error - Knights Robotics </title>
+    <title>404 Error - Knights Robotics</title>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -14,114 +15,118 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
 
-*{
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Zen Maru Gothic', sans-serif;
-}
-html,body
-{
-        /*background-image: linear-gradient(to left, #660066,#6a006a,#560056,#440044,#3c003c,#2a002a,#3c003c,#440044,#560056,#6a006a,#660066); 
-        background-image: linear-gradient(to left, #eef6ff, #ffffff, #eef6ff, #ffffff, #ffffff, #eef6ff, #ffffff, #eef6ff);
-    */
-    background-color: #000000;
-}
-.logo
-{
-    /*display: flex;
-    justify-content: center;
-    position: relative;
-    top: -590px;
-    margin: 0 auto;
-    max-width: 960px;*/
-    max-width: 193.5px;
-    margin: 0 auto;
-    height: 200px;
-    position: relative; 
-    top: -600px;
-    filter: drop-shadow(0 0 2rem #660066);
-} 
-.logoimage
-{
-    width: 100%;
-    padding-top: 64.5%;
-    background: url(images/Knights%20Robotics%206901%20Logo.png) no-repeat center;
-    background-size: contain;
-}
-.e404
-{
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -70px;
-    width: 90%;
-}
-.e404 h1
-{
-    font-size: 4em;
-    color: #ffffff;
-}
-.e404 p
-{
-    font-size: 2.5em;
-    color: #ffffff;
-    transition: 0.5s;
-}
-.e404 a
-{
-    position: relative;
-    display: inline-block;
-    margin-top: 20px;
-    background: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    font-size: 1.55em;
-    font-weight: 900;
-    transition: all .6s ease;
-    color: #660066;
-    border: 3px solid white;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.10;
-    background-color: lightsteelblue;
-    outline: none;
-    border-radius: 11px;
-    filter: drop-shadow(0 0 1.05rem black);
-}
-.e404 a:hover
-{
-    background-color: #660066;
-    color: whitesmoke;
-    border-color: black;
-    border-radius: 1em;
-    filter: drop-shadow(0 0 1.25rem #660066);
-}
-.pic404
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-}
+    * {
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Zen Maru Gothic', sans-serif;
+    }
+
+    html,
+    body {
+        background-color: #000000;
+    }
+
+    img {
+        margin: 0 auto;
+        height: 200px;
+        position: relative;
+        filter: drop-shadow(0 0 2rem #660066);
+    }
+
+    .logoimage {
+        width: 100%;
+        padding-top: 64.5%;
+        background: url(images/Robotics%20Logo.png) no-repeat center;
+        background-size: contain;
+    }
+
+    .e404 {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -70px;
+        width: 90%;
+    }
+
+    .e404 h1 {
+        font-size: 4em;
+        color: #ffffff;
+    }
+
+    .e404 p {
+        font-size: 2.5em;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+
+    .e404 a {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+        background: linear-gradient(to right, #660066, #FF00FF);
+        padding: 15px 35px;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: 900;
+        transition: all 0.6s ease;
+        color: #ffffff;
+        border: 3px solid #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.2;
+        outline: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .e404 a:hover {
+        background: linear-gradient(to right, #FF00FF, #660066);
+        color: #f5f5f5;
+        border-color: #000000;
+        border-radius: 1em;
+        box-shadow: 0 0 12px rgba(102, 0, 102, 0.7);
+    }
+
+    .pic404 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+    }
+
+    @media (max-width: 425px) {
+        .e404 h1 {
+            font-size: 3.5em;
+        }
+
+        .e404 p {
+            font-size: 2em;
+        }
+
+        .e404 a {
+            padding: 15px 25px;
+            font-size: 1.35em;
+        }
+    }
+
 </style>
-    <body>
-        <main class="pic404">
-            <img src="images/Knights%20Robotics%206901%20Logo.png">
-            </main>
-        <div class="e404">
-            <h1>Page not found</h1>
-        <p>
-            404! Need some help? 
-        </p>
-        <a href="https://www.bibhas.xyz/6901">Let's go back</a>
+
+<body>
+    <main class="pic404">
+        <img src="images/Robotics%20Logo.png" alt="Knights Robotics Logo">
+    </main>
+    <div class="e404">
+        <h1>404 Error</h1>
+        <p>How did you get here?</p>
+        <a href="https://www.frc6901.org/6901">Let's go back</a>
     </div>
-        <!-- what's up? -->
-    </body>
+</body>
+
 </html>
 
 
